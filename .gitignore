@@ -1,0 +1,73 @@
+# Next.js
+.next/
+out/
+build/
+dist/
+.turbo/
+.vercel/
+.open-next/
+.workers/
+.wrangler/
+.cloudflare/
+
+# Dependencies
+node_modules/
+.pnpm-store/
+.pnp/
+.pnp.js
+yarn-error.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Env
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+*.tmp
+*.swp
+*~
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# Python (scrape_360fitclub.py)
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env/
+*.egg-info/
+.pytest_cache/
+
+# Research - ignore downloaded media (besar), keep json manifest
+research/360fitclub/images/
+research/360fitclub/videos/
+# kalau mau keep json, jangan ignore *.json
+# untuk ignore semua research uncomment baris bawah:
+# research/
+
+# Keep source logo, but ignore generated copies if mau generate ulang di build
+# public/logo.jpg  -> keep (butuh runtime) jadi jangan ignore
+# app/icon.jpg     -> keep (favicon) jadi jangan ignore
+# kalau mau auto-copy, uncomment:
+# public/logo.jpg
+# app/icon.jpg
+
+# Coverage & test
+coverage/
+.nyc_output/
