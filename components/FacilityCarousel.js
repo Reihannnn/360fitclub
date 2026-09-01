@@ -53,14 +53,16 @@ export default function FacilityCarousel() {
   const [active, setActive] = useState(0)
   const [paused, setPaused] = useState(false)
 
+  // ponytail: pakai container.scrollTo bukan card.scrollIntoView biar tidak scroll halaman (terutama mobile)
   const scrollToIndex = useCallback((idx) => {
     const el = ref.current
     if (!el) return
     const card = el.children[idx]
-    if (card) {
-      card.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
-      setActive(idx)
-    }
+    if (!card) return
+    // hitung offset card relatif ke container, bukan viewport
+    const left = card.offsetLeft - el.offsetLeft
+    el.scrollTo({ left, behavior: 'smooth' })
+    setActive(idx)
   }, [])
 
   const next = useCallback(() => {
@@ -133,7 +135,7 @@ export default function FacilityCarousel() {
         onMouseLeave={() => setPaused(false)}
         onTouchStart={() => setPaused(true)}
         onTouchEnd={() => setPaused(false)}
-        className="mt-8 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth px-[5vw] max-[800px]:px-[4vw] pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        className="mt-8 flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth overscroll-x-contain touch-pan-x px-[5vw] max-[800px]:px-[4vw] pb-4 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         {items.map((item) => {
           const Icon = item.icon
