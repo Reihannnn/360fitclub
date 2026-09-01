@@ -170,7 +170,7 @@ export default function FacilityCarousel() {
         ))}
       </div>
 
-      <p className="text-center font-mono text-[11px] tracking-[0.04em] text-muted-2 mt-3">Auto-play tiap 4 detik • hover untuk pause • geser di HP</p>
+      <p className="text-center font-mono text-[11px] tracking-[0.04em] text-muted-2 mt-3"></p>
     </section>
   )
 }
