@@ -84,8 +84,22 @@ const programs = [
 ];
 
 export default function Home() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map(([question, answer]) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: { "@type": "Answer", text: answer },
+    })),
+  };
+
   return (
     <main className="bg-white text-ink">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <SiteNav />
 
       {/* HERO */}
@@ -104,6 +118,7 @@ export default function Home() {
             BEKASI — <Clock size={12} className="inline" /> BUKA S/D 22.00
           </p>
           <h1 className="font-display font-extrabold tracking-[-0.05em] leading-[0.88] text-[clamp(44px,7vw,84px)] max-[800px]:text-[42px] m-0 text-balance">
+            <span className="sr-only">360FITCLUB gym di Tambun Bekasi. </span>
             GERAK{" "}
             <em className="font-bold text-[#B8B8B8] not-italic">LEBIH.</em>
             <br />

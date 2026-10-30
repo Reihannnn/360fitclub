@@ -37,7 +37,7 @@ export default function SiteNav() {
           <span className="text-ink">360</span>
           <span className="font-extrabold text-muted-2 tracking-[-0.03em]">
             FITCLUB
-          </span>          
+          </span>
         </span>
       </a>
 
@@ -103,7 +103,7 @@ export default function SiteNav() {
           </a>
         ))}
         <a
-          className="px-[6vw] py-[18px] border-t border-lime-strong bg-lime text-ink font-bold flex justify-between items-center gap-2"
+          className="px-[6vw] py-[18px] border-t border-green-600 bg-green-600 text-white font-bold flex justify-between items-center gap-2"
           href={wa}
           target="_blank"
           rel="noreferrer"

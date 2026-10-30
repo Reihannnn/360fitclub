@@ -1,11 +1,13 @@
 import SiteNav, { InnerFooter, InnerHero, wa } from "../../components/SiteNav";
 import { Dumbbell, Users, Sparkles, Building2, Clock, ArrowUpRight, Eye } from "lucide-react";
+import { pageMetadata } from "../../lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Fasilitas Gym di Tambun Bekasi | 360FITCLUB",
   description:
     "Jelajahi fasilitas 360FITCLUB di Tambun Selatan: area gym, alat fitness, studio kelas, dan ruang latihan yang nyaman.",
-};
+  path: "/fasilitas",
+});
 
 const facilities = [
   {

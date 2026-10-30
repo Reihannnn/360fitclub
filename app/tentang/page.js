@@ -11,12 +11,14 @@ import {
   Sparkles,
   Repeat2,
 } from "lucide-react";
+import { pageMetadata } from "../../lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Tentang 360FITCLUB | Gym Tambun Selatan Bekasi",
   description:
     "Kenali 360FITCLUB, pusat kebugaran di Tridaya Sakti Tambun Selatan, Kabupaten Bekasi dengan suasana nyaman dan komunitas suportif.",
-};
+  path: "/tentang",
+});
 
 export default function AboutPage() {
   return (

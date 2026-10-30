@@ -7,17 +7,19 @@ import {
   MessageCircle,
   Navigation,
 } from "lucide-react";
+import { pageMetadata } from "../../lib/seo";
 
 const maps =
   "https://www.google.com/maps/search/?api=1&query=360FITCLUB%2C+Jl.+KH.+Mas%27ud+No.153%2C+Tridaya+Sakti%2C+Bekasi";
 const mapsEmbed =
   "https://maps.google.com/maps?q=Jl.%20KH.%20Mas%27ud%20No.153%20Tridaya%20Sakti%20Tambun%20Selatan%20Bekasi&t=&z=16&ie=UTF8&iwloc=&output=embed";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Lokasi 360FITCLUB | Gym Tridaya Sakti Tambun Bekasi",
   description:
     "Temukan lokasi 360FITCLUB di Jl. KH. Mas'ud No.153, Tridaya Sakti, Tambun Selatan, Kabupaten Bekasi. Klik peta untuk navigasi.",
-};
+  path: "/lokasi",
+});
 
 export default function LocationPage() {
   return (

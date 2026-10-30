@@ -9,12 +9,14 @@ import {
   MessageCircle,
   BadgeCheck,
 } from "lucide-react";
+import { pageMetadata } from "../../lib/seo";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Membership Gym Tambun Bekasi | 360FITCLUB",
   description:
     "Tanyakan harga membership gym, kelas, personal trainer, dan paket latihan terbaru 360FITCLUB melalui WhatsApp.",
-};
+  path: "/membership",
+});
 
 export default function MembershipPage() {
   return (
